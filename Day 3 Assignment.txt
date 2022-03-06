@@ -1,0 +1,349 @@
+Ques 1: Iterate JSON with for, for in, for of and forEach loops
+
+const myResume = {
+  basics: {
+    name: 'Munir Suri',
+    image: 'https://myphotos.com/munirsuri.png',
+    email: 'munir.suri@divishiconsulting.com',
+    mobile: 9818478573,
+    portfolio: 'https://www.munirsuri.com',
+    about_me: 'I am a programmer',
+    address: {
+      address_line1: 'E 2079, Palam Vihar',
+      address_line2: 'Next to Mother Dairy, Near Vayapaar Kendra',
+      city: 'Gurgaon',
+      State: 'Haryana',
+      Country: 'India',
+    },
+  },
+  work: [
+    {
+      name: 'Hippo Stores Technology Pvt Ltd',
+      position: 'Senior Vice President - Demand Generation',
+      website: 'https://www.hippostores.com',
+      startDate: '2019-12-10',
+      endDate: '',
+      currentlyWorkingHere: true,
+      summary:
+        'Responsible for the revenue of the company, leading a team of 100+ field sales engineers and the marketing department',
+      highlight:
+        'Started the business. Achieved a run rate of 150 crores per annum within 8 months of launch',
+    },
+    {
+      name: 'FitArt Funiture Pvt Ltd',
+      position: 'Founder and CEO',
+      website: 'https://www.fitart.com',
+      startDate: '2013-05-01',
+      endDate: '2019-12-09',
+      currentlyWorkingHere: false,
+      summary: 'Start up company manufacturing modular furniture',
+      highlight:
+        'Started the business. Sold the company after establishing a strong foundation',
+    },
+    {
+      name: 'Bharti Walmart Ltd',
+      position: 'Senior Vice President',
+      website: 'https://www.bestprice.com',
+      startDate: '2006-05-01',
+      endDate: '2013-04-31',
+      currentlyWorkingHere: false,
+      summary: 'Responsible for new store growth',
+      highlight: 'Opened 600+ stores across India',
+    },
+    {
+      name: 'AT Kearney',
+      position: 'Principal - Retail and Consumer Goods',
+      website: 'https://www.atkearney.com',
+      startDate: '2003-05-01',
+      endDate: '2006-04-31',
+      currentlyWorkingHere: false,
+      summary: 'Responsible for retail and consumer goods practice',
+      highlight:
+        'Started the practice in India and grew the same to US$ 6 million per year',
+    },
+    {
+      name: 'Usha Drager Ltd',
+      position: 'Business Manager - Architectural Systems',
+      website: 'https://www.draegerwerk.com',
+      startDate: '1995-05-01',
+      endDate: '2001-02-20',
+      currentlyWorkingHere: false,
+      summary:
+        'Started my career as a sales trainee and grew to lead a business vertical',
+      highlight:
+        'Established the company with no. 1 market share position in 5 years',
+    },
+  ],
+  education: [
+    {
+      institution: 'IIM Kozhikode',
+      url: 'https://www.iimk.nic.in/',
+      area: 'Strategy and Marketing',
+      studyType: 'Masters',
+      startDate: '2002-01-01',
+      endDate: '2013-01-01',
+      score: '3.7',
+      courses: [
+        'Operations Management',
+        'Sales Management',
+        'Marketing Management',
+        'Strategy and Planning',
+      ],
+    },
+    {
+      institution: 'PREC',
+      url: 'https://www.prec.org/',
+      area: 'Bachelor of Engineering - Electronics and Communications',
+      studyType: 'Bachelors',
+      startDate: '1990-05-01',
+      endDate: '1994-03-31',
+      score: '9',
+      courses: [
+        'Microprocessors',
+        'Telecommunications',
+        'Microwave Systems',
+        'Chip Designing',
+      ],
+    },
+    {
+      institution: 'Kendriya Vidhyalaya',
+      url: 'https://www.kvpune.com/',
+      area: 'Class XII CBSE',
+      studyType: 'High School',
+      startDate: '1989-05-01',
+      endDate: '1987-03-31',
+      score: '92% Overall',
+      courses: ['Maths', 'Physics', 'Chemistry', 'Biology', 'English'],
+    },
+  ],
+  awards: [
+    {
+      title: 'Best Campaign Of The Year',
+      date: '2022-02-25',
+      awarder: 'Brand Equity',
+      summary:
+        'Gold Prize for designing and executing the best launch campaign for building product industry',
+    },
+  ],
+
+  certificates: [
+    {
+      name: 'Digital Transformation',
+      date: '2019-02-20',
+      issuer: 'BCG Consulting',
+      url: 'https://www.bcg.com',
+    },
+  ],
+
+  languages: [
+    {
+      language: 'English',
+      fluency: 'education and proficient',
+    },
+    {
+      language: 'Hindi',
+      fluency: 'Native speaker',
+    },
+  ],
+  interests: [
+    {
+      name: 'Wildlife',
+      keywords: ['Ferrets', 'Unicorns'],
+    },
+  ],
+  references: [
+    {
+      name: 'Jane Doe',
+      reference: 'Reference…',
+    },
+  ],
+};
+
+
+// using for in loop for getting the basic details of the resume
+// for in loop a tool to use with enumerables to iterate over the properties of the object
+// can be used with arrays also but recommended not to use with Arrays
+// always use [key] notation to access the values of the properties
+// cannot be used with MAP or SET
+// only forward direction
+
+for (let key in myResume.basics) {
+   console.log(`${key}: ${myResume.basics[key]}`)
+}
+
+// using for of loop for getting all the companies worked for
+// for of loop is for iterating through arrays, strings MAP or SET objects. It has access to values but not indexes
+// must use let for the variable to ensure that the variable has local scope
+// only forward direction
+
+for (let comp of myResume.work) {
+   console.log(comp.name)
+}
+
+//using forEach loop to get list of institutions the candidate has studied in
+// forEach is a method of array prototype which allows to iterate over the elements of the array.
+//It can access both index and value of each element while iterating.
+// executes a call back function for each element of the array
+// It is a finite loop so will end even there is no break statement
+// Only forward direction
+
+myResume.education.forEach(print);
+
+function print(val, i) {
+   console.log(val.institution, i)
+}
+
+//using for Loop for listing companies worked for from start of career
+// for loop provides more control for starting point and ending point
+// works in both the directions
+// has access to both index and value
+
+
+for (let i = myResume.work.length-1; i >= 0; i--){
+   console.log(myResume.work[i].name)
+}
+
+
+
+Ques 2 : MY RESUME IN JSON FORMAT
+
+
+{
+   "basics":{
+      "name":"Munir Suri",
+      "image":"https://myphotos.com/munirsuri.png",
+      "email": "munir.suri@divishiconsulting.com",
+      "mobile": 9818478573,
+      "portfolio": "https://www.munirsuri.com",
+      "about_me": "I am a programmer",
+      "address":{
+         "address_line1":"E 2079, Palam Vihar",
+         "address_line2":"Next to Mother Dairy, Near Vayapaar Kendra",
+         "city": "Gurgaon",
+         "State":"Haryana",
+         "Country":"India"
+      }
+   },
+   "work":[
+      {
+      "name":"Hippo Stores Technology Pvt Ltd",
+      "position":"Senior Vice President - Demand Generation",
+      "website":"https://www.hippostores.com",
+      "startDate":"2019-12-10",
+      "endDate": "",
+      "currentlyWorkingHere": true,
+      "summary":"Responsible for the revenue of the company, leading a team of 100+ field sales engineers and the marketing department",
+      "highlight": "Started the business. Achieved a run rate of 150 crores per annum within 8 months of launch"
+      },
+      {
+      "name":"FitArt Funiture Pvt Ltd",
+      "position":"Founder and CEO",
+      "website":"https://www.fitart.com",
+      "startDate":"2013-05-01",
+      "endDate": "2019-12-09",
+      "currentlyWorkingHere": false,
+      "summary":"Start up company manufacturing modular furniture",
+      "highlight": "Started the business. Sold the company after establishing a strong foundation"
+      },
+      {
+      "name":"Bharti Walmart Ltd",
+      "position":"Senior Vice President",
+      "website":"https://www.bestprice.com",
+      "startDate":"2006-05-01",
+      "endDate": "2013-04-31",
+      "currentlyWorkingHere": false,
+      "summary":"Responsible for new store growth",
+      "highlight": "Opened 600+ stores across India"
+      },
+      {
+      "name":"AT Kearney",
+      "position":"Principal - Retail and Consumer Goods",
+      "website":"https://www.atkearney.com",
+      "startDate":"2003-05-01",
+      "endDate": "2006-04-31",
+      "currentlyWorkingHere": false,
+      "summary":"Responsible for retail and consumer goods practice",
+      "highlight": "Started the practice in India and grew the same to US$ 6 million per year"
+      },
+      {
+      "name":"Usha Drager Ltd",
+      "position":"Business Manager - Architectural Systems",
+      "website":"https://www.draegerwerk.com",
+      "startDate":"1995-05-01",
+      "endDate": "2001-02-20",
+      "currentlyWorkingHere": false,
+      "summary":"Started my career as a sales trainee and grew to lead a business vertical",
+      "highlight": "Established the company with no. 1 market share position in 5 years"
+      }
+   ],
+    "education": [{
+    "institution": "IIM Kozhikode",
+    "url": "https://www.iimk.nic.in/",
+    "area": "Strategy and Marketing",
+    "studyType": "Masters",
+    "startDate": "2002-01-01",
+    "endDate": "2013-01-01",
+    "score": "3.7",
+    "courses": [
+      "Operations Management","Sales Management","Marketing Management","Strategy and Planning"
+    ]
+    },
+   {
+    "institution": "PREC",
+    "url": "https://www.prec.org/",
+    "area": "Bachelor of Engineering - Electronics and Communications",
+    "studyType": "Bachelors",
+    "startDate": "1990-05-01",
+    "endDate": "1994-03-31",
+    "score": "9",
+    "courses": [
+      "Microprocessors","Telecommunications","Microwave Systems","Chip Designing"
+    ]
+   },
+   {
+   "institution": "Kendriya Vidhyalaya",
+    "url": "https://www.kvpune.com/",
+    "area": "Class XII CBSE",
+    "studyType": "High School",
+    "startDate": "1989-05-01",
+    "endDate": "1987-03-31",
+    "score": "92% Overall",
+    "courses": [
+      "Maths","Physics","Chemistry","Biology","English"
+    ]
+   }
+   
+],
+  "awards": [{
+    "title": "Best Campaign Of The Year",
+    "date": "2022-02-25",
+    "awarder": "Brand Equity",
+    "summary": "Gold Prize for designing and executing the best launch campaign for building product industry"
+  }],
+
+  "certificates": [{
+    "name": "Digital Transformation",
+    "date": "2019-02-20",
+    "issuer": "BCG Consulting",
+    "url": "https://www.bcg.com"
+  }], 
+  "languages": [{
+    "language": "English",
+    "fluency": "education and proficient"
+  },
+  {
+   "language": "Hindi",
+    "fluency": "Native speaker"
+}],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }] 
+}
