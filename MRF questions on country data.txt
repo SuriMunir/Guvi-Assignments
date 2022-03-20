@@ -1,0 +1,41 @@
+var request = new XMLHttpRequest();
+
+request.open(
+  'GET',
+  'https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json'
+);
+
+request.send();
+
+request.onload = function () {
+  var data = JSON.parse(request.response);
+  console.log(data);
+
+  // Ques 1. : filter to get countries in asia
+  let asia = data.filter((elem) => elem.region === 'Asia');
+  console.log(asia);
+
+  //Ques 2: filter to find countries having populaton less than 2 lakh
+  let lessPopulation = data.filter((elem) => elem.population < 200000);
+  console.log(lessPopulation);
+
+  //Ques 3: printing name, capital and flag using for Each
+  data.forEach((d) =>
+    console.log(`Name:${d.name},Capital:${d.capital},Flag:${d.flag}`)
+  );
+
+  //Ques 4:finding the sum of all country population
+  let totalPopulation = data
+    .map((e) => e.population)
+    .reduce((sum, cur) => sum + cur, 0);
+  console.log(totalPopulation);
+
+  // let moreCurrency = data.filter((c) => c.currencies.length > 1);
+  // console.log(moreCurrency);
+
+  //Ques 5:filter and some for finding countries which use US dollar as a currency
+  let usCurrnecy = data.filter((c) =>
+    c.currencies.some((x) => x.name === 'United States dollar')
+  );
+  console.log(usCurrnecy);
+};
