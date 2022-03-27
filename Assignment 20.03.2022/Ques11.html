@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>HTML CSS 001 input default value</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <!-- default value by using value attribue -->
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <label for="quantity">Quantity</label>
+        <input type="number" name="quantity" id="quantity" />
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" />
+        <!-- default value using checked attribute -->
+        <label for="gender">Gender</label>
+        <div>
+          <input type="radio" name="gender" id="male" value="male" />Male
+          <input type="radio" name="gender" id="female" value="female" />Female
+          <input type="radio" name="gender" id="other" value="other" />Other
+        </div>
+        <!-- default value using checked attribute -->
+        <label for="hobby">Hobbies</label>
+        <div>
+          <input type="checkbox" name="hobby" id="music" value="music" />Music
+          <input
+            type="checkbox"
+            name="hobby"
+            id="reading"
+            value="reading"
+          />Reading
+          <input
+            type="checkbox"
+            name="hobby"
+            id="sports"
+            value="sports"
+          />Sports
+          <input
+            type="checkbox"
+            name="hobby"
+            id="movies"
+            value="movies"
+          />movies
+        </div>
+        <!-- default value using the selected attribute -->
+        <label for="country">Country</label>
+        <select name="country" id="country">
+          <option value="India">India</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Nepal">Nepal</option>
+          <option value="Bhutan">Bhutan</option>
+          <option value="Srilanka">Srilanka</option>
+        </select>
+        <!-- default value using text in between the tags -->
+        <label for="comments">Comments</label>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

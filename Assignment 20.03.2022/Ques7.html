@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="magozine.css" />
+    <title>MagOZine Subsription</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form action="#" method="post">
+          <div class="form-heading">
+            Yes! I want to subscribe to <span>Mag-O-Zine</span>
+          </div>
+          <div class="name">
+            <div class="form-group">
+              <input type="text" name="fname" id="fname" required />
+              <label for="fname">First Name</label>
+            </div>
+            <div class="form-group">
+              <input type="text" name="lname" id="lname" required />
+              <label for="lname">Last Name</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="address" id="address" required />
+            <label for="address">Address</label>
+          </div>
+          <div class="address-group">
+            <div class="form-group">
+              <input type="text" name="city" id="city" required />
+              <label for="city">City</label>
+            </div>
+            <div class="form-group">
+              <input type="text" name="state" id="state" required />
+              <label for="state">State</label>
+            </div>
+            <div class="form-group">
+              <input type="text" name="zip" id="zip" required />
+              <label for="zip">Zip</label>
+            </div>
+          </div>
+          <div class="radio-group">
+            Subscibe for:
+            <input
+              type="radio"
+              name="period"
+              id="1-year"
+              value="1-year"
+              checked
+            />
+            1 year ($19.95)
+            <input type="radio" name="period" id="2-year" value="2-year" /> 2
+            year ($35.00)
+          </div>
+          <div class="check-group">
+            Send me more information about:
+            <div>
+              <input
+                type="checkbox"
+                name="informaton"
+                id="Computer-Zine"
+                value="Computer-Zine"
+                checked
+              />Computer-Zine
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="informaton"
+                id="Fishin-Zine"
+                value="Fishing-Zine"
+              />Fishing-Zine
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="informaton"
+                id="Cat-O-Zine"
+                value="Cat-O-Zine"
+                checked
+              />Cat-O-Zine
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">Subscibe</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

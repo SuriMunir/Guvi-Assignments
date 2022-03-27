@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guvi Contact Form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="logo">Contact Us</div>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="comment">Reason for contact</label>
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Reason for contact"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Contact Us</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #102a42;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.ques-container{
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius:8px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.ques-container a{
+  margin: 1rem 0;
+}
+
+
+.form-container {
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius:8px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #678e38;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.25rem;
+  margin: 1rem 0;
+}
+
+
+
+.form-group {
+  margin: 1rem 0;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  color: #808080;
+}
+
+.form-group input,
+.form-group textarea {
+  outline: none;
+  border: 1px solid #e8e8e8;
+  padding: 0.5rem;
+  font-family: 'Open sans' sans-serif;
+  color: #a9a9a9;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a9a9a9;
+  font-family: 'Open sans' sans-serif;
+  font-size: 0.875rem;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  background: #678e38;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size:0.875rem;
+  font-weight:bold;
+}
+
+.radio-group{
+   display:flex
+}
